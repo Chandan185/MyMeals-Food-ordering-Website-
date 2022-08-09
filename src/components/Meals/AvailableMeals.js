@@ -17,7 +17,7 @@ const Meals = [
   {
     id: "3",
     name: "Pizza",
-    description: "Onion,corn,tomato,capsicum",
+    description: "Onion,corn",
     price: 200,
   },
   {
@@ -29,7 +29,7 @@ const Meals = [
   {
     id: "5",
     name: "Dosa",
-    description: "served with sambhar and chutney",
+    description: "served with sambhar",
     price: 90,
   },
 ];

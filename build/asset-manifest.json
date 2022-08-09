@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MyMeals-Food-ordering-Website-/static/css/main.f1b02a0e.chunk.css",
+    "main.js": "/MyMeals-Food-ordering-Website-/static/js/main.09459a8d.chunk.js",
+    "main.js.map": "/MyMeals-Food-ordering-Website-/static/js/main.09459a8d.chunk.js.map",
+    "runtime-main.js": "/MyMeals-Food-ordering-Website-/static/js/runtime-main.cb4c4a7f.js",
+    "runtime-main.js.map": "/MyMeals-Food-ordering-Website-/static/js/runtime-main.cb4c4a7f.js.map",
+    "static/js/2.46595fcc.chunk.js": "/MyMeals-Food-ordering-Website-/static/js/2.46595fcc.chunk.js",
+    "static/js/2.46595fcc.chunk.js.map": "/MyMeals-Food-ordering-Website-/static/js/2.46595fcc.chunk.js.map",
+    "index.html": "/MyMeals-Food-ordering-Website-/index.html",
+    "static/css/main.f1b02a0e.chunk.css.map": "/MyMeals-Food-ordering-Website-/static/css/main.f1b02a0e.chunk.css.map",
+    "static/js/2.46595fcc.chunk.js.LICENSE.txt": "/MyMeals-Food-ordering-Website-/static/js/2.46595fcc.chunk.js.LICENSE.txt",
+    "static/media/bg2image.d535745c.avif": "/MyMeals-Food-ordering-Website-/static/media/bg2image.d535745c.avif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb4c4a7f.js",
+    "static/js/2.46595fcc.chunk.js",
+    "static/css/main.f1b02a0e.chunk.css",
+    "static/js/main.09459a8d.chunk.js"
+  ]
+}
