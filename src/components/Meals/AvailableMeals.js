@@ -1,39 +1,52 @@
 import classes from "./AvailableMeals.module.css";
 import Card from "../UI/Card";
 import MealItem from "./Mealitem/MealItem";
-const Meals = [
-  {
-    id: "1",
-    name: "Veg Burger",
-    description: "Healthy and leafy",
-    price: 120,
-  },
-  {
-    id: "2",
-    name: "Chicken Burger",
-    description: "Roasted Chicken patti",
-    price: 160,
-  },
-  {
-    id: "3",
-    name: "Pizza",
-    description: "Onion,corn",
-    price: 200,
-  },
-  {
-    id: "4",
-    name: "Veg Noodles",
-    description: "served with gravy",
-    price: 190,
-  },
-  {
-    id: "5",
-    name: "Dosa",
-    description: "served with sambhar",
-    price: 90,
-  },
-];
+import { useEffect, useState } from "react";
+
 const AvailableMeals = () => {
+  const [Meals, setMeals] = useState([]);
+  const [isLoading, setisLoading] = useState(true);
+  const [httperror, sethttperror] = useState();
+  useEffect(() => {
+    const fetchMeals = async () => {
+      const response = await fetch(
+        "https://mymeals-c6eae-default-rtdb.firebaseio.com/meals.json"
+      );
+      if (!response.ok) {
+        throw new Error("something went wrong!");
+      }
+      const responseData = await response.json();
+      const loadedMeals = [];
+      for (const key in responseData) {
+        loadedMeals.push({
+          id: key,
+          name: responseData[key].name,
+          description: responseData[key].description,
+          price: responseData[key].price,
+        });
+      }
+      setMeals(loadedMeals);
+      setisLoading(false);
+    };
+    fetchMeals().catch((error) => {
+      setisLoading(false);
+      sethttperror(error);
+    });
+  }, []);
+  if (isLoading) {
+    return (
+      <section className={classes.Loading}>
+        {isLoading && <p>Loading...</p>}
+      </section>
+    );
+  }
+  if (httperror) {
+    return (
+      <section className={classes.errorLoading}>
+        <p>Failed to load! Try again later.</p>
+      </section>
+    );
+  }
   const meallist = Meals.map((meal) => (
     <MealItem
       key={meal.id}

@@ -11,6 +11,9 @@ const Navbar = (props) => {
       </header>
       <div className={classes["main-image"]}>
         <img src={Mealsimage} alt="img" />
+        <div className={classes.brand}>
+          <h1>MyMeals Welcomes you on board.</h1>
+        </div>
       </div>
     </Fragment>
   );
